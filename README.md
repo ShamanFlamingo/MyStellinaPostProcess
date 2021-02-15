@@ -1,7 +1,6 @@
-# MyStellinaPostProcess
+# MyStellinaPostProcess using Siril
 
 **Stellina_Create_MasterDark_&_MasterFlat.ssf** creates master-dark.fit and master-flat.fit.
-
 **Stellina_Stack_Lights.ssf** stacks lights.
 
 Prerequisites are:
