@@ -1,0 +1,82 @@
+################################################################################
+# Stellina_Create_MasterDark_&_MasterFlat.ssf
+# Ver 1.1 du 15/02/2020
+# Compatibilité avec Siril: Version >= 0.99.8.1
+requires 0.99.8.1
+
+# This script stacks Stellina lights fits 
+# output are master-dark.fit & master-flat.fit files in ../MASTER/
+
+# C:\TEMP\MYSTELLINA
+# ├───L
+# │   └───S
+# │       ├───DARKFLATS
+# │       │   └───SRC
+# │       ├───DARKS
+# │       │   └───SRC
+# │       ├───FLATS
+# │       │   └───SRC
+# │       ├───IMAGES
+# │       │   └───SRC
+# │       └───MASTER
+
+
+# PREREQ:
+# BGGR darks fits in both /DARKS/SRC and /DARKFLATS/SRC
+# BGGR Flats fits in /FLATS/SRC
+
+
+
+
+# Dossier de travail
+cd 'C:\Temp'
+
+set32bits  
+setcompress 0
+setext fits
+setmem .8
+
+
+# Dossier de l'objet
+cd './MYSTELLINA/L/S'
+
+################################################################################
+# Création du master-dark
+################################################################################
+cd 'DARKS'
+cd SRC  
+convert darks -debayer -out=..
+cd '..'
+stack darks rej 3.0 3.0 -nonorm  -out=../MASTER/master-dark.fit
+cd '..'
+
+cd 'DARKFLATS'
+cd SRC  
+convert darkflats -debayer -out=..
+cd '..'
+stack darkflats rej 3.0 3.0 -nonorm  -out=../MASTER/master-darkflat.fit
+cd '..'
+
+################################################################################
+# Création du master-flat
+################################################################################
+cd 'FLATS'
+cd SRC  
+convert flats -debayer -out=..
+cd '..'
+preprocess flats  -dark=../MASTER/master-darkflat.fit
+stack pp_flats rej 3.0 3.0  -out=../MASTER/master-flat.fit
+cd '..'
+
+cd '..'
+
+
+
+cd '../../..'
+
+# Dossier de travail
+cd 'C:/Temp'
+
+
+
+close  
