@@ -63,7 +63,7 @@ cd 'IMAGES'
 ################################################################################
 #Empilement des lights calibrées
 ################################################################################
-stack r_pp_images rej 4.0 3.0  -norm=addscale  -filter-fwhm=20%  -filter-round=20% -out=../L
+stack r_pp_images rej 4.0 3.0  -nonorm  -filter-fwhm=90%  -filter-round=90% -out=../L
 # Copie L en C00
 load '../L'
 save ../../../Temp/C00
