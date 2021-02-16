@@ -11,17 +11,21 @@ Prerequisites are:
 * create following arborescence
 ```
  C:\TEMP\MYSTELLINA
- ├───L
- │   └───S
- │       ├───DARKFLATS
- │       │   └───SRC
- │       ├───DARKS
- │       │   └───SRC
- │       ├───FLATS
- │       │   └───SRC
- │       ├───IMAGES
- │       │   └───SRC
- │       └───MASTER
+├───L
+│   └───S
+│       ├───DARKFLATS
+│       │   └───SRC
+│       ├───DARKS
+│       │   └───SRC
+│       ├───FLATS
+│       │   └───SRC
+│       ├───IMAGES
+│       │   └───SRC
+│       └───MASTER
+└───Temp
+
 ```
 
-Doc to add scripts to Siril: https://free-astro.org/index.php?title=Siril:scripts
+How to use scripts to Siril: https://free-astro.org/index.php?title=Siril:scripts
+
+List of Siril commands https://free-astro.org/index.php/Siril:Commands#Siril_command_line_functions_reference
