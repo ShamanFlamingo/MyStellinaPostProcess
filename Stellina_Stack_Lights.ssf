@@ -19,6 +19,7 @@ requires 0.99.8.1
 # │       ├───IMAGES
 # │       │   └───SRC
 # │       └───MASTER
+# └───Temp
 
 # PREREQ:
 # BGGR master-dark.fit & BGGR master-flat.fit in ../MASTER/
@@ -42,7 +43,9 @@ cd './MYSTELLINA/L/S'
 cd 'IMAGES'
 cd SRC 
 
+################################################################################
 #pré-traitement des lights
+################################################################################
 convert images -debayer -out=..
 cd '..'
 preprocess images  -debayer -dark=../MASTER/master-dark.fit -flat=../MASTER/master-flat.fit
@@ -50,13 +53,16 @@ cd '..'
 cd 'IMAGES'
 
 
-
+################################################################################
 #Alignement des lights 
+################################################################################
 register pp_images 
 #register pp_images -drizzle
 cd '..'
 cd 'IMAGES'
+################################################################################
 #Empilement des lights calibrées
+################################################################################
 stack r_pp_images rej 4.0 3.0  -norm=addscale  -filter-fwhm=20%  -filter-round=20% -out=../L
 # Copie L en C00
 load '../L'
