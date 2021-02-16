@@ -7,8 +7,8 @@
 
 
 Prerequisites are:
-* use fits with same Bayer pattern
-* create following arborescence
+- use fits with same Bayer pattern
+- create following arborescence
 ```
  C:\TEMP\MYSTELLINA
 ├───L
