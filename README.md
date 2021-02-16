@@ -26,6 +26,6 @@ Prerequisites are:
 
 ```
 
-How to use scripts to Siril: https://free-astro.org/index.php?title=Siril:scripts
+How to use scripts in Siril: https://free-astro.org/index.php?title=Siril:scripts
 
 List of Siril commands https://free-astro.org/index.php/Siril:Commands#Siril_command_line_functions_reference
