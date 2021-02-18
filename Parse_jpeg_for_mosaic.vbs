@@ -2,7 +2,7 @@
 '******** parse_jpeg_for_mosaic.vbs V1.1 02/2021 *************
 '*************************************************************
 '***Set your own paths***************************************
-objStartFolder = "D:\Astro-Stellina\stellina-bdaf4f"
+StellinaFilesFolder = "D:\Astro-Stellina\stellina-bdaf4f"
 mosaicFolder= "D:\Astro-Stellina\mosaic"
 ExifToolPath= "D:\Astro-Stellina\exiftool.exe"
 '*************************************************************
@@ -28,7 +28,7 @@ If objFSO.FolderExists(mosaicFolder & target) Then
 End If
 
 wscript.echo date&" "&time&" ---> Searching for "&target
-ShowSubfolders objFSO.GetFolder(objStartFolder)
+ShowSubfolders objFSO.GetFolder(StellinaFilesFolder)
 
 FinalFolder = replace(trim(mosaicFolder & target & "-" & NumberOfFiles & "-" & replace(date,"/","")& " " &replace(time,":",""))," ","-")
 objFSO.movefolder mosaicFolder & target,  FinalFolder
