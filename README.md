@@ -29,3 +29,12 @@ Prerequisites are:
 How to use scripts in Siril: https://free-astro.org/index.php?title=Siril:scripts
 
 List of Siril commands https://free-astro.org/index.php/Siril:Commands#Siril_command_line_functions_reference
+
+
+# MyStellinaPostProcess using VBscript
+
+**Parse_jpeg_for_mosaic.vbs** parses all your Stellina files to find best jpeg regarding all re-framings for a specific target
+
+Prerequisites is:
+exiftool.exe from https://exiftool.org/
+
