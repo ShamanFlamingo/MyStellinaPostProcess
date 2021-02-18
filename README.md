@@ -38,3 +38,4 @@ List of Siril commands https://free-astro.org/index.php/Siril:Commands#Siril_com
 Prerequisite is:
 exiftool.exe from https://exiftool.org/
 
+![Tuto](https://github.com/ShamanFlamingo/MyStellinaPostProcess/blob/master/materials/Parse_jpeg_for_mosaic.mp4)
