@@ -35,6 +35,6 @@ List of Siril commands https://free-astro.org/index.php/Siril:Commands#Siril_com
 
 **Parse_jpeg_for_mosaic.vbs** parses all your Stellina files to find best jpeg regarding all re-framings for a specific target
 
-Prerequisites is:
+Prerequisite is:
 exiftool.exe from https://exiftool.org/
 
